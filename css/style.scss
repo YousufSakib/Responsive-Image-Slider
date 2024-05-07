@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    position: relative;
+    .box {
+        overflow: hidden;
+        .images {
+            display: flex;
+            background-color: slateblue;
+            width: max-content;
+            gap: 10px;
+            img {
+                height: 500px;
+                width: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+    .left,
+    .right {
+        border-radius: 50%;
+        padding: 5px;
+        background-color: rgb(135, 145, 135);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        img {
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+        }
+    }
+    .right {
+        right: 0;
+    }
+    .left {
+        img {
+            rotate: 180deg;
+        }
+    }
+    .verticalLine {
+        width: 100%;
+        height: 20px;
+        background-color: rgb(124, 107, 107);
+        padding-top: 5px;
+        .innerLine {
+            width: 0px;
+            height: 10px;
+            background-color: red;
+            cursor: pointer;
+        }
+    }
+}
